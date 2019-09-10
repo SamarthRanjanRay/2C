@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" const="text/html;charset=UTF-8" />
+    <link href="http://fonts.googleapis.com/css?family=Comfortaa|Poppins" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="style.css" >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script src="https://kit.fontawesome.com/a9175caa3b.js"></script>
+    <title>2C | to-Chat</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <section id="chat_zone">
+      <section id="feedback"></section>
+      <section id="changename"></section>
+      <br>
+    </section>
+    <span id="users_btn"><i class="fas fa-user fa-2x"></i></span>
+    <span id="settings_btn"><i class="fas fa-cog fa-2x"></i></span>
+    <section id="user_zone">
+      <center>
+        <h1>Active Users</h1>
+        <br>
+        <div id="active_users">
+        </div>
+      </center>
+    </section>
+    <section id="settings_zone">
+      <center>
+        <hr>
+        <h1>Settings</h1>
+        <br>
+        <label for="username" id="usnlabel"><span>Username</span>
+        <input id="username" type="text" name="usn">
+        <br><br>
+        <label for="avatar" id="piclabel"><span>Avatar link</span>
+        <input id="avatar" type="text" name="pic">
+        <br><br><br>
+        <button type="button" id="set" name="set">Set Username and Avatar</button>
+      </center>
+    </section>
+    <section id="input_zone">
+      <input id="message" type="text">
+    </section>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+      var room = "<%- room %>"
+
+    </script>
+    <script src="chat.js"></script>
+  </body>
+</html>
