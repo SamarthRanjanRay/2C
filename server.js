@@ -2,6 +2,7 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
+const PORT = process.env.PORT || 5000
 
 // Declare the total users joined till date variable
 var user_count = -1;
@@ -28,7 +29,7 @@ app.get('/:room', (req, res) => {
 })
 
 // Listens the application on 3000 port
-server = app.listen(3000)
+server = app.listen(PORT)
 
 // Socket io main defenitions
 const io = require('socket.io')(server)
