@@ -20,13 +20,13 @@ app.get('/', (req, res) => {
 
 // Redirects the user to the chat box with a specific url which contains the name of the room they intend to join
 app.post('/', (req, res) => {
-	req.body.room = req.body.room.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+	req.body.room = req.body.room.replace(/</g, "&lt;").replace(/>/g, "&gt;")
 	res.redirect('/' + req.body.room);
 })
 
 // Renders the chatbox for the user
 app.get('/:room', (req, res) => {
-	res.render('index', {room:req.params.room})
+	res.render('index', {room:req.params.room.replace(/</g, "&lt;").replace(/>/g, "&gt;")})
 })
 
 // Listens the application on 3000 port
